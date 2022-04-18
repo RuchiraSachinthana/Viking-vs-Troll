@@ -3,7 +3,8 @@ var mainAudio = new Audio("./assets/sounds/mainMusic.mp3");
 var viking = document.getElementById("viking");
 var troll = document.getElementById("troll");
 
-
+var vikingX = 0;
+var vikingY = 0;
 
 
 function buttonClick() {
