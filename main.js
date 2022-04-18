@@ -11,6 +11,9 @@ var vikingIdleAnimationId = 0;
 function buttonClick() {
     audio.play();
     mainMusic();
+
+    removeAll();
+    vikingVisible();
 }
 
 function mainMusic(){
