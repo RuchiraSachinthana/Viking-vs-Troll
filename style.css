@@ -82,3 +82,16 @@ body {
 .copy {
     font-size:14px;
 }
+
+.viking {
+    width: 512.1px;
+    height: 512px;
+    /*background-color: red;*/
+    background-image: url("./assets/images/viking.png");
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 300px;
+    transform: scale(0.7);
+    visibility: hidden;
+
+}

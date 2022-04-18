@@ -6,6 +6,7 @@ var troll = document.getElementById("troll");
 var vikingX = 0;
 var vikingY = 0;
 
+var vikingIdleAnimationId = 0;
 
 function buttonClick() {
     audio.play();
@@ -28,5 +29,20 @@ function removeAll() {
     name.style.visibility = "hidden";
     playBtn.style.visibility = "hidden";
     footer.style.visibility = "hidden";
+}
 
+function vikingIdleAnimation() {
+    vikingY = 0;
+    vikingX = vikingX - 512.1;
+    viking.style.backgroundPositionX = vikingX + "px";
+
+    if (vikingX < -5121) {
+        vikingY = 0;
+        viking.style.backgroundPositionY = vikingY + "px";
+    }
+}
+
+function vikingVisible() {
+    vikingIdleAnimationId = setInterval(vikingIdleAnimation, 200);
+    viking.style.visibility = "visible";
 }
