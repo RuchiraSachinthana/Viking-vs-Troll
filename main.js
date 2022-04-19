@@ -7,7 +7,7 @@ var vikingX = 0;
 var vikingY = 0;
 
 var vikingIdleAnimationId = 0;
-var AttackId = 0;
+
 var vikingFWalkId = 0;
 var vikingBWalkId = 0;
 
@@ -15,6 +15,11 @@ var trollX = 0;
 var trollY = 0;
 
 var trollIdleAnimationId = 0;
+
+var trollFWalkId = 0;
+var trollBWalkId = 0;
+
+var AttackId = 0;
 
 function buttonClick() {
     audio.play();
