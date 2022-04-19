@@ -90,6 +90,16 @@ function KeyListner(event) {
             trollFWalkId =  setInterval(trollWalkFrontAnimation,200);
         }
     }
+
+    if (key == 39 ) { // Key =Right Arrow
+        if (trollBWalkId == 0){
+            trollX = 0;
+            clearInterval(trollIdleAnimationId);
+            trollIdleAnimationId = 0;
+            trollBWalkId = setInterval(trollWalkBackAnimation,200);
+        }
+    }
+    
 }
 
 
