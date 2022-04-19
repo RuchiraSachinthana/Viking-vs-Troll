@@ -7,6 +7,9 @@ var vikingX = 0;
 var vikingY = 0;
 
 var vikingIdleAnimationId = 0;
+var AttackId = 0;
+var vikingFWalkId = 0;
+var vikingBWalkId = 0;
 
 var trollX = 0;
 var trollY = 0;
@@ -132,5 +135,22 @@ function vikingWalkFrontAnimation() {
 
 }
 
+function vikingWalkBackAnimation() {
+    vikingY = -512;
+    vikingX = vikingX - 512.1;
+    viking.style.backgroundPositionX = vikingX + "px";
+    viking.style.backgroundPositionY = vikingY + "px";
+    vikingML = vikingML - 10;
+    viking.style.marginLeft = vikingML + "px";
+    viking.style.transform = "scaleX(-1) scale(0.7)";
+
+    if (vikingX < -5121) {
+        vikingY = 0;
+        viking.style.backgroundPositionY = vikingY + "px";
+        clearInterval(vikingBWalkId);
+        vikingBWalkId = 0;
+        vikingIdleAnimationId = setInterval(vikingIdleAnimation, 200);
+    }
+}
 
 
