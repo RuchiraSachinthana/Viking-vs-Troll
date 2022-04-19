@@ -108,4 +108,29 @@ function trollAttackAnimation() {
     troll.style.backgroundPositionY = trollY + "px";
 }
 
+/* Viking move */
+
+var vikingML = 300;
+
+function vikingWalkFrontAnimation() {
+    vikingY = -512;
+    vikingX = vikingX - 512.1;
+    viking.style.backgroundPositionX = vikingX + "px";
+    viking.style.backgroundPositionY = vikingY + "px";
+
+    vikingML = vikingML + 10;
+    viking.style.marginLeft = vikingML + "px";
+    viking.style.transform = "scaleX(1) scale(0.7)";
+
+    if (vikingX < -5121) {
+        vikingY = 0;
+        viking.style.backgroundPositionY = vikingY + "px";
+        clearInterval(vikingFWalkId);
+        vikingFWalkId = 0;
+        vikingIdleAnimationId = setInterval(vikingIdleAnimation, 200);
+    }
+
+}
+
+
 
