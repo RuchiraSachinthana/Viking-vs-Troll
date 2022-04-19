@@ -193,6 +193,23 @@ function trollWalkFrontAnimation() {
 
 }
 
+function trollWalkBackAnimation() {
+    trollY = -262.8;
+    trollX = trollX - 420;
+    troll.style.backgroundPositionX = trollX + "px";
+    troll.style.backgroundPositionY = trollY + "px";
+    trollML = trollML + 10;
+    troll.style.marginLeft = trollML + "px";
+    troll.style.transform = "scaleX(1) scale(1.4)";
+
+    if (trollX < -4200) {
+        trollY = 0;
+        troll.style.backgroundPositionY = trollY + "px";
+        clearInterval(trollBWalkId);
+        trollBWalkId = 0;
+        trollIdleAnimationId = setInterval(trollIdleAnimation, 200);
+    }
+}
 
 
 
