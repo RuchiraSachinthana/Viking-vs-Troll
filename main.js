@@ -45,12 +45,18 @@ function KeyListner(event) {
     var key = event.which;
 
     if (key == 32) { //Space
-
         vikingX = 0;
-
         vikingAttackAnimation();
-
     }
+
+    if ( key == 13) { //Enter
+
+        trollX = 0;
+
+        trollAttackAnimation();
+    }
+
+
 }
 
 
@@ -94,4 +100,12 @@ function vikingAttackAnimation() {
 
 
 }
+
+function trollAttackAnimation() {
+    trollY = -525.6;
+    trollX = trollX - 420;
+    troll.style.backgroundPositionX = trollX + "px";
+    troll.style.backgroundPositionY = trollY + "px";
+}
+
 
