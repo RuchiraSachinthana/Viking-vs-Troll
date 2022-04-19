@@ -59,6 +59,21 @@ function KeyListner(event) {
         trollAttackAnimation();
     }
 
+    if (key == 68) { //D
+        if (vikingFWalkId == 0) {
+            vikingX = 0;
+            vikingFWalkId = setInterval(vikingWalkFrontAnimation, 250);
+        }
+    }
+
+    if (key == 65) { // Key = A
+        if(vikingBWalkId == 0){
+            vikingX = 0;
+            clearInterval(vikingIdleAnimationId);
+            vikingIdleAnimationId = 0;
+            vikingBWalkId =  setInterval(vikingWalkBackAnimation,200);
+        }
+    }
 
 }
 
