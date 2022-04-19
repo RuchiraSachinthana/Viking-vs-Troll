@@ -49,14 +49,14 @@ function KeyListner(event) {
 
     if (key == 32) { //Space
         vikingX = 0;
-        vikingAttackAnimation();
+        AttackId = vikingAttackAnimation();
     }
 
     if ( key == 13) { //Enter
 
         trollX = 0;
 
-        trollAttackAnimation();
+        AttackId = trollAttackAnimation();
     }
 
     if (key == 68) { //D
