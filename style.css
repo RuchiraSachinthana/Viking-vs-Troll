@@ -95,3 +95,16 @@ body {
     visibility: hidden;
 
 }
+
+.troll {
+
+    width: 420px;
+    height: 262.8px;
+    /*background-color: blue;*/
+    background-image: url("./assets/images/troll.png");
+    position: absolute;
+    margin-top: 385px;
+    margin-left: 850px;
+    transform: scale(1.4) scaleX(-1);
+    visibility: hidden;
+}
