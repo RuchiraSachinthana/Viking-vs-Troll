@@ -11,6 +11,8 @@ var vikingIdleAnimationId = 0;
 var trollX = 0;
 var trollY = 0;
 
+var trollIdleAnimationId = 0;
+
 function buttonClick() {
     audio.play();
     mainMusic();
@@ -37,6 +39,20 @@ function removeAll() {
     playBtn.style.visibility = "hidden";
     footer.style.visibility = "hidden";
 }
+
+function KeyListner(event) {
+
+    var key = event.which;
+
+    if (key == 32) { //Space
+
+        vikingX = 0;
+
+        vikingAttackAnimation();
+
+    }
+}
+
 
 function vikingIdleAnimation() {
     vikingY = 0;
@@ -69,3 +85,13 @@ function trollVisible() {
     trollIdleAnimationId = setInterval(trollIdleAnimation, 200);
     troll.style.visibility = "visible";
 }
+
+function vikingAttackAnimation() {
+    vikingY = -1024;
+    vikingX = vikingX - 512.1;
+    viking.style.backgroundPositionX = vikingX + "px";
+    viking.style.backgroundPositionY = vikingY + "px";
+
+
+}
+
