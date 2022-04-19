@@ -99,7 +99,7 @@ function KeyListner(event) {
             trollBWalkId = setInterval(trollWalkBackAnimation,200);
         }
     }
-    
+
 }
 
 
