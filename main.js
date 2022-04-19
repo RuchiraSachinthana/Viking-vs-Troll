@@ -82,6 +82,14 @@ function KeyListner(event) {
         }
     }
 
+    if (key == 37) { // Key = Left Arrow
+        if(trollFWalkId == 0){
+            trollX = 0;
+            clearInterval(trollIdleAnimationId);
+            trollIdleAnimationId = 0;
+            trollFWalkId =  setInterval(trollWalkFrontAnimation,200);
+        }
+    }
 }
 
 
